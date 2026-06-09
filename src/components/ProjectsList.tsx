@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import { useState, useEffect } from "react";
 import "../styles/ProjectsList.css";
 
@@ -44,12 +43,12 @@ export default function ProjectsList() {
             <div className="project-links">
               {url && (
                 <a href={url} target="_blank">
-                  <Icon icon="mdi:open-in-new" /> Ver sitio
+                  Ver sitio →
                 </a>
               )}
               {repo_url && (
                 <a href={repo_url} target="_blank">
-                  <Icon icon="mdi:github" /> Ver código
+                  Ver código →
                 </a>
               )}
             </div>

@@ -1,6 +1,5 @@
 ---
 import Logo from "./Logo.astro";
-import { Icon } from "astro-icon/components";
 import { githubUrl, linkedinUrl, email } from "../config/footer";
 const currentYear = new Date().getFullYear();
 ---
@@ -14,9 +13,9 @@ const currentYear = new Date().getFullYear();
       v2.
     </p>
     <div class="links">
-      <a href={githubUrl} target="_blank"><Icon name="mdi:github" /></a>
-      <a href={linkedinUrl} target="_blank"><Icon name="mdi:linkedin" /></a>
-      <a href={`mailto:${email}`}><Icon name="mdi:email" /></a>
+      <a href={githubUrl} target="_blank">GH</a>
+      <a href={linkedinUrl} target="_blank">LI</a>
+      <a href={`mailto:${email}`}>@</a>
     </div>
   </content>
 </footer>

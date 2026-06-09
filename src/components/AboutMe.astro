@@ -1,6 +1,5 @@
 ---
 import Section from "../layouts/Section.astro";
-import { Icon } from "astro-icon/components";
 
 const birthDate: Date = new Date(2001, 1, 2);
 const age: number = Math.floor(
@@ -37,10 +36,7 @@ const age: number = Math.floor(
   <h3>Mis áreas de trabajo</h3>
   <div class="work-areas">
     <div class="work-area">
-      <h4>
-        <Icon name="mdi:infinity" />
-        SRE / DevOps
-      </h4>
+      <h4>SRE / DevOps</h4>
       <p>
         Actualmente me encuentro trabajando de SRE/DevOps, donde trabajo
         principalmente con tecnologías como Docker, Kubernetes, Webservers,
@@ -48,10 +44,7 @@ const age: number = Math.floor(
       </p>
     </div>
     <div class="work-area">
-      <h4>
-        <Icon name="mdi:language-python" />
-        Backend
-      </h4>
+      <h4>Backend</h4>
       <p>
         Tengo experiencia como desarrollador backend, siendo mi fuerte principal
         el desarrollo en Python con frameworks como Flask, FastAPI, PyQT/PySide
@@ -59,20 +52,14 @@ const age: number = Math.floor(
       </p>
     </div>
     <div class="work-area">
-      <h4>
-        <Icon name="mdi:react" />
-        Frontend
-      </h4>
+      <h4>Frontend</h4>
       <p>
         Me encuentro incursionando en el desarrollo frontend, aprendiendo Astro,
         Reflex y React para crear aplicaciones web modernas y mantenibles.
       </p>
     </div>
     <div class="work-area">
-      <h4>
-        <Icon name="mdi:school" />
-        Profesor
-      </h4>
+      <h4>Profesor</h4>
       <p>
         Me gusta enseñar y tengo como objetivo aportar en formación técnica en
         niveles superiores a mediano plazo.
@@ -113,9 +100,6 @@ const age: number = Math.floor(
       align-items: center;
       gap: 0.45rem;
       font-size: 1.05rem;
-    }
-    .work-area [data-icon] {
-      color: var(--accentColor);
     }
     @media (max-width: 900px) {
       .intro-grid,

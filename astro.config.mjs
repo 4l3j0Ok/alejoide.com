@@ -1,8 +1,6 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config';
 
-import icon from "astro-icon";
-
 import node from "@astrojs/node";
 
 import react from "@astrojs/react";
@@ -10,7 +8,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://alejoide.com",
-  integrations: [icon(), react()],
+  integrations: [react()],
 
   env: {
     schema: {
