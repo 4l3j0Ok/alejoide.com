@@ -25,12 +25,12 @@ interface Props {
     align-items: flex-start;
   }
   .content {
-    width: var(--contentWidth);
+    width: var(--content-width);
     display: grid;
     gap: 1.5rem;
   }
   .section-heading {
-    border-bottom: 1px solid var(--borderSoft);
+    border-bottom: 1px solid var(--border-soft);
     padding-bottom: 1rem;
   }
   .kicker {
@@ -39,20 +39,20 @@ interface Props {
     text-transform: uppercase;
     letter-spacing: 0.16em;
     font-size: 0.76rem;
-    color: var(--accentColor);
+    color: var(--accent);
   }
   .section-heading h2 {
     margin: 0.25rem 0 0;
     font-size: clamp(2rem, 3.4vw, 2.8rem);
     font-weight: 700;
-    color: var(--textPrimary);
+    color: var(--text-primary);
   }
   .body {
-    background: var(--surfaceSoft);
-    border: 1px solid var(--borderSoft);
+    background: var(--surface-soft);
+    border: 1px solid var(--border-soft);
     border-radius: 1.25rem;
     padding: 2rem;
-    box-shadow: var(--shadowSoft);
+    box-shadow: var(--shadow-soft);
     backdrop-filter: blur(10px);
   }
   @media (max-width: 900px) {

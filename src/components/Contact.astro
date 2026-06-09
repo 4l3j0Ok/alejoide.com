@@ -33,25 +33,25 @@ import { PUBLIC_EMAIL } from "astro:env/client";
     align-items: stretch;
   }
   .contact-info {
-    border: 1px solid var(--borderSoft);
+    border: 1px solid var(--border-soft);
     border-radius: 1rem;
     padding: 1rem;
-    background: rgba(9, 16, 30, 0.6);
+    background: var(--surface-contact);
     box-sizing: border-box;
   }
   .form-card {
-    border: 1px solid var(--borderSoft);
+    border: 1px solid var(--border-soft);
     border-radius: 1rem;
     padding: 1rem;
-    background: rgba(9, 16, 30, 0.72);
+    background: var(--surface-contactStrong);
   }
   .email {
     font-weight: 600;
-    color: var(--accentColor);
-    border-bottom: 1px dashed rgba(72, 199, 168, 0.65);
+    color: var(--accent);
+    border-bottom: 1px dashed var(--accent-medium);
   }
   .email:hover {
-    color: var(--accentColorDark);
+    color: var(--accent-dark);
   }
   @media (max-width: 900px) {
     .contact-grid {

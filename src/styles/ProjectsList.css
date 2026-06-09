@@ -9,17 +9,17 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 1rem;
-  border: 1px solid var(--borderSoft);
+  border: 1px solid var(--border-soft);
   border-radius: 1rem;
   padding: 1rem;
-  background: rgba(9, 16, 30, 0.78);
-  box-shadow: 0 14px 40px rgba(3, 8, 16, 0.35);
+  background: var(--surface-deep);
+  box-shadow: var(--shadow-card);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .project:hover {
   transform: translateY(-4px);
-  border-color: rgba(72, 199, 168, 0.55);
+  border-color: var(--accent-soft);
 }
 
 .project img {
@@ -32,7 +32,7 @@
 .project-info h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: var(--textPrimary);
+  color: var(--text-primary);
 }
 
 .project-info p {
@@ -50,18 +50,19 @@
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  color: var(--textPrimary);
-  border: 1px solid var(--borderSoft);
-  background: rgba(8, 14, 26, 0.6);
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+  background: transparent;
   padding: 0.46rem 0.72rem;
   border-radius: 0.65rem;
   text-decoration: none;
   font-size: 0.9rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .project-links a:hover {
-  border-color: var(--accentColor);
-  color: var(--accentColor);
+  background: var(--accent-muted);
+  border-color: var(--accent);
 }
 
 @media (max-width: 900px) {

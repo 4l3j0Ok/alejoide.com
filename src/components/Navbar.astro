@@ -26,16 +26,16 @@ import Logo from "./Logo.astro";
   }
   .content {
     display: flex;
-    width: var(--contentWidth);
+    width: var(--content-width);
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    border: 1px solid var(--borderSoft);
+    border: 1px solid var(--border-soft);
     border-radius: 999px;
     padding: 0.8rem 1.2rem;
-    background: rgba(8, 14, 27, 0.72);
+    background: var(--surface-navbar);
     backdrop-filter: blur(14px);
-    box-shadow: 0 14px 35px rgba(4, 10, 20, 0.3);
+    box-shadow: var(--shadow-navbar);
     pointer-events: auto;
   }
   .links {
@@ -48,10 +48,10 @@ import Logo from "./Logo.astro";
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--textMuted);
+    color: var(--text-muted);
   }
   .links a:hover {
-    color: var(--accentColor);
+    color: var(--accent);
   }
   @media (max-width: 900px) {
     .content {

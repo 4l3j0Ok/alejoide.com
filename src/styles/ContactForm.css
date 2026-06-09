@@ -10,7 +10,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 0.78rem;
-  color: var(--textMuted);
+  color: var(--text-muted);
 }
 
 .top {
@@ -31,8 +31,8 @@ textarea {
   padding: 0.72rem;
   border-radius: 0.72rem;
   border: 1px solid transparent;
-  background-color: var(--inputBackgroundColor);
-  color: var(--inputTextColor);
+  background-color: var(--input-background);
+  color: var(--input-text);
   font-family: "Cascadia Code Variable";
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -40,8 +40,8 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: var(--accentColor);
-  box-shadow: 0 0 0 3px rgba(72, 199, 168, 0.14);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-muted);
 }
 
 textarea {
@@ -52,38 +52,41 @@ textarea {
 button {
   padding: 0.72rem;
   border-radius: 0.72rem;
-  border: 1px solid transparent;
-  background-color: #c5f6e9;
-  color: #05201a;
+  border: 1px solid var(--accent-soft);
+  background: transparent;
+  color: var(--accent);
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #9de8d3;
+  background: var(--accent-muted);
+  border-color: var(--accent);
   transform: translateY(-1px);
 }
 
 :disabled {
-  background-color: var(--blockColor);
-  color: var(--textPrimary);
+  background-color: var(--block);
+  border-color: transparent;
+  color: var(--text-primary);
   cursor: not-allowed;
 }
 
 button:disabled:hover {
-  background-color: var(--blockColor);
+  background-color: var(--block);
+  border-color: transparent;
 }
 
 .char-counter {
   font-size: 0.7rem;
-  color: var(--textMuted);
+  color: var(--text-muted);
   text-align: right;
   font-family: "Cascadia Code Variable", monospace;
 }
 
 .char-counter.warn {
-  color: #e57373;
+  color: var(--danger);
 }
 
 @media (max-width: 900px) {

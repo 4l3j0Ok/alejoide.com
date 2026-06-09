@@ -1,0 +1,59 @@
+:root {
+  /* ── Brand / Accent ── */
+  --accent: #ff6b35;
+  --accent-dark: #e85d04;
+  --accent-light: #ffedd5;
+  --accent-light-hover: #fed7aa;
+  --accent-muted: rgba(255, 107, 53, 0.14);
+  --accent-soft: rgba(255, 107, 53, 0.55);
+  --accent-medium: rgba(255, 107, 53, 0.65);
+  --accent-glow: rgba(255, 107, 53, 0.17);
+  --accent-overlay: rgba(255, 107, 53, 0.25);
+
+  /* ── Warm glow ── */
+  --blue-accent: rgba(255, 107, 53, 0.2);
+
+  /* ── Background ── */
+  --background-left: #000000;
+  --background-right: #0a0a0a;
+
+  /* ── Surface ── */
+  --surface-soft: rgba(20, 20, 20, 0.56);
+  --surface-strong: rgba(15, 15, 15, 0.85);
+  --surface-dark: rgba(18, 18, 18, 0.65);
+  --surface-darker: rgba(22, 22, 22, 0.65);
+  --surface-deep: rgba(12, 12, 12, 0.78);
+  --surface-deep-soft: rgba(25, 25, 25, 0.6);
+  --surface-contact: rgba(18, 18, 18, 0.6);
+  --surface-contact-strong: rgba(15, 15, 15, 0.72);
+  --surface-header: rgba(20, 20, 20, 0.74);
+  --surface-footer: rgba(10, 10, 10, 0.6);
+  --surface-navbar: rgba(12, 12, 12, 0.72);
+
+  /* ── Text ── */
+  --text-primary: #fafafa;
+  --text-muted: #a1a1aa;
+  --text-dark: #1a0a00;
+  --text-dark-alt: #2a0f00;
+  --text-light: #fff5eb;
+  --selection-text: #1a0a00;
+
+  /* ── Border ── */
+  --border-soft: rgba(255, 107, 53, 0.2);
+
+  /* ── Block / Input ── */
+  --input-background: #141414;
+  --input-text: #fafafa;
+  --block: #1a1a1a;
+
+  /* ── Shadow ── */
+  --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 14px 40px rgba(0, 0, 0, 0.5);
+  --shadow-navbar: 0 14px 35px rgba(0, 0, 0, 0.4);
+
+  /* ── Danger ── */
+  --danger: #ef4444;
+
+  /* ── Layout ── */
+  --content-width: min(1120px, 92vw);
+}

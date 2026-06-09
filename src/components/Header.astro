@@ -31,7 +31,12 @@ const experienceYears: number = Math.floor(
             </div>
         </div>
         <div class="item visual">
-            <Image src={meImage} alt="Alejo Sarmiento" loading="eager" />
+            <Image
+                src={meImage}
+                alt="Alejo Sarmiento"
+                loading="eager"
+                draggable="false"
+            />
         </div>
     </div>
 </header>
@@ -47,13 +52,13 @@ const experienceYears: number = Math.floor(
         grid-template-columns: 1.2fr 0.8fr;
         gap: 2rem;
         align-items: center;
-        width: var(--contentWidth);
+        width: var(--content-width);
         min-height: min(76vh, 760px);
     }
     .eyebrow {
         font-size: 0.8rem;
         letter-spacing: 0.09em;
-        color: var(--accentColor);
+        color: var(--accent);
         margin: 0;
     }
     .content h1 {
@@ -75,12 +80,12 @@ const experienceYears: number = Math.floor(
     }
     .stack span {
         padding: 0.4rem 0.7rem;
-        border: 1px solid var(--borderSoft);
-        background: rgba(12, 20, 37, 0.74);
+        border: 1px solid var(--border-soft);
+        background: var(--surface-header);
         border-radius: 999px;
         font-size: 0.82rem;
         font-family: "Cascadia Code Variable", monospace;
-        color: var(--textPrimary);
+        color: var(--text-primary);
     }
     .actions {
         display: flex;
@@ -90,20 +95,25 @@ const experienceYears: number = Math.floor(
     .actions a {
         padding: 0.7rem 1.1rem;
         border-radius: 0.8rem;
-        border: 1px solid transparent;
-        background: var(--accentColor);
-        color: #041018;
+        border: 1px solid var(--accent-soft);
+        background: transparent;
+        color: var(--accent);
         font-weight: 700;
         font-size: 0.95rem;
+        transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
     .actions a:hover {
-        background: var(--accentColorDark);
-        color: #e6fffb;
+        background: var(--accent-muted);
+        border-color: var(--accent);
     }
     .actions .ghost {
-        background: transparent;
-        border-color: var(--borderSoft);
-        color: var(--textPrimary);
+        border-color: var(--border-soft);
+        color: var(--text-primary);
+    }
+    .actions .ghost:hover {
+        background: var(--accent-muted);
+        border-color: var(--accent);
+        color: var(--accent);
     }
     .visual {
         padding: 1.1rem;
@@ -122,9 +132,11 @@ const experienceYears: number = Math.floor(
         object-fit: cover;
         object-position: top;
         filter: saturate(1.2) contrast(1.03)
-            drop-shadow(0px 0px 25px var(--blockColor));
+            drop-shadow(0px 0px 25px var(--accent-glow));
         mask-image: linear-gradient(black 80%, transparent);
         -webkit-mask-image: linear-gradient(black 80%, transparent);
+        user-select: none;
+        -webkit-user-drag: none;
     }
     @media (max-width: 900px) {
         header {

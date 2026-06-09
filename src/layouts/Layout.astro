@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource-variable/manrope";
 import "@fontsource-variable/cascadia-code";
-import { colors } from "../config/colors.js";
+import "../styles/globals.css";
 
 interface Props {
     title: string;
@@ -28,33 +28,13 @@ interface Props {
     </body>
 </html>
 
-<style
-    is:global
-    define:vars={{
-        backgroundLeftColor: colors.backgroundLeft,
-        backgroundRightColor: colors.backgroundRight,
-        accentColor: colors.accent,
-        accentColorDark: colors.accentDark,
-        inputBackgroundColor: colors.inputBackground,
-        inputTextColor: colors.inputText,
-        blockColor: colors.block,
-        contentWidth: "min(1120px, 92vw)",
-    }}
->
-    :root {
-        --surfaceSoft: rgba(14, 24, 43, 0.56);
-        --surfaceStrong: rgba(10, 18, 34, 0.85);
-        --borderSoft: rgba(153, 181, 255, 0.2);
-        --textPrimary: #f4f8ff;
-        --textMuted: #9aa8bf;
-        --shadowSoft: 0 24px 60px rgba(3, 7, 14, 0.38);
-    }
+<style is:global>
     html {
         font-family: "Manrope Variable", sans-serif;
-        color: var(--textPrimary);
+        color: var(--text-primary);
         ::selection {
-            background: var(--accentColor);
-            color: #05121b;
+            background: var(--accent);
+            color: var(--selection-text);
         }
         scroll-behavior: smooth;
     }
@@ -62,18 +42,18 @@ interface Props {
         background:
             radial-gradient(
                 circle at 12% 10%,
-                rgba(72, 199, 168, 0.17),
+                var(--accent-glow),
                 transparent 34%
             ),
             radial-gradient(
                 circle at 87% 18%,
-                rgba(59, 130, 246, 0.2),
+                var(--blue-accent),
                 transparent 32%
             ),
             linear-gradient(
                 130deg,
-                var(--backgroundLeftColor),
-                var(--backgroundRightColor)
+                var(--background-left),
+                var(--background-right)
             );
         background-attachment: fixed;
         margin: 0;
@@ -83,7 +63,7 @@ interface Props {
         content: "";
         position: fixed;
         inset: 0;
-        background-color: rgba(72, 199, 168, 0.25);
+        background-color: var(--accent-overlay);
         mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOSIgaGVpZ2h0PSI1MC4xMTUiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMi41IiBkPSJNMTQuNDk4IDE2Ljg1OCAwIDguNDg4LjAwMi04LjI1N2wxNC41LTguMzc0TDI5LTguMjZsLS4wMDIgMTYuNzQ1em0wIDUwLjA2TDAgNTguNTQ4bC4wMDItMTYuNzQ1IDE0LjUtOC4zNzNMMjkgNDEuOGwtLjAwMiAxNi43NDR6TTI4Ljk5NiA0MS44bC0xNC40OTgtOC4zNy4wMDItMTYuNzQ0TDI5IDguMzEybDE0LjQ5OCA4LjM3LS4wMDIgMTYuNzQ1em0tMjkgMC0xNC40OTgtOC4zNy4wMDItMTYuNzQ0TDAgOC4zMTJsMTQuNDk4IDguMzctLjAwMiAxNi43NDV6Ii8+PC9zdmc+");
         -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOSIgaGVpZ2h0PSI1MC4xMTUiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMi41IiBkPSJNMTQuNDk4IDE2Ljg1OCAwIDguNDg4LjAwMi04LjI1N2wxNC41LTguMzc0TDI5LTguMjZsLS4wMDIgMTYuNzQ1em0wIDUwLjA2TDAgNTguNTQ4bC4wMDItMTYuNzQ1IDE0LjUtOC4zNzNMMjkgNDEuOGwtLjAwMiAxNi43NDR6TTI4Ljk5NiA0MS44bC0xNC40OTgtOC4zNy4wMDItMTYuNzQ0TDI5IDguMzEybDE0LjQ5OCA4LjM3LS4wMDIgMTYuNzQ1em0tMjkgMC0xNC40OTgtOC4zNy4wMDItMTYuNzQ0TDAgOC4zMTJsMTQuNDk4IDguMzctLjAwMiAxNi43NDV6Ii8+PC9zdmc+");
         mask-size: 48px 83px;
@@ -98,12 +78,12 @@ interface Props {
         position: relative;
     }
     a {
-        color: var(--textPrimary);
+        color: var(--text-primary);
         text-decoration: none;
         transition: color 0.2s ease;
     }
     a:hover {
-        color: var(--accentColor);
+        color: var(--accent);
     }
     h1,
     h2,
@@ -114,7 +94,7 @@ interface Props {
     }
     p {
         line-height: 1.75;
-        color: var(--textMuted);
+        color: var(--text-muted);
     }
     main {
         display: grid;

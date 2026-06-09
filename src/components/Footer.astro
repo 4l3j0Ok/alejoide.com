@@ -1,5 +1,6 @@
 ---
 import Logo from "./Logo.astro";
+import { Icon } from "astro-icon/components";
 import { githubUrl, linkedinUrl, email } from "../config/footer";
 const currentYear = new Date().getFullYear();
 ---
@@ -13,9 +14,15 @@ const currentYear = new Date().getFullYear();
       v2.
     </p>
     <div class="links">
-      <a href={githubUrl} target="_blank">GH</a>
-      <a href={linkedinUrl} target="_blank">LI</a>
-      <a href={`mailto:${email}`}>@</a>
+      <a href={githubUrl} target="_blank" aria-label="GitHub">
+        <Icon name="mdi:github" />
+      </a>
+      <a href={linkedinUrl} target="_blank" aria-label="LinkedIn">
+        <Icon name="mdi:linkedin" />
+      </a>
+      <a href={`mailto:${email}`} aria-label="Email">
+        <Icon name="mdi:email" />
+      </a>
     </div>
   </content>
 </footer>
@@ -34,14 +41,13 @@ const currentYear = new Date().getFullYear();
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: var(--contentWidth);
-    border-top: 1px solid var(--borderSoft);
+    width: var(--content-width);
+    border-top: 1px solid var(--border-soft);
     padding: 1.2rem 0 2rem;
     gap: 1rem;
-    color: var(--textMuted);
+    color: var(--text-muted);
   }
   .links {
-    font-size: 1.5rem;
     display: flex;
     gap: 0.55rem;
   }
@@ -52,12 +58,22 @@ const currentYear = new Date().getFullYear();
     width: 2.1rem;
     height: 2.1rem;
     border-radius: 999px;
-    border: 1px solid var(--borderSoft);
-    background: rgba(7, 12, 24, 0.6);
+    border: 1px solid var(--border-soft);
+    background: var(--surface-footer);
+    color: var(--text-muted);
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .links a :global(svg) {
+    width: 1.15rem;
+    height: 1.15rem;
   }
   .project-name {
     font-weight: 600;
-    color: var(--accentColor);
+    color: var(--accent);
   }
   @media (max-width: 900px) {
     content {
