@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/4l3j0Ok/alejoide.com/compare/2.10.0...2.11.0) (2026-06-09)
+
+
+### Features
+
+* migrate color system to CSS variables and add orange-black theme ([c95b7a2](https://github.com/4l3j0Ok/alejoide.com/commit/c95b7a269dfb2be42b0285f343e75fb81ae2b45d))
+
 # [2.10.0](https://github.com/4l3j0Ok/alejoide.com/compare/2.9.6...2.10.0) (2026-04-06)
 
 
