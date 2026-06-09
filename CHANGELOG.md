@@ -1,3 +1,10 @@
+## [2.11.2](https://github.com/4l3j0Ok/alejoide.com/compare/2.11.1...2.11.2) (2026-06-09)
+
+
+### Bug Fixes
+
+* add ts-ignore for fontsource side-effect imports to fix Docker build ([3d41f39](https://github.com/4l3j0Ok/alejoide.com/commit/3d41f396baebf3449770d028d0fc9f322db3f330))
+
 ## [2.11.1](https://github.com/4l3j0Ok/alejoide.com/compare/2.11.0...2.11.1) (2026-06-09)
 
 
