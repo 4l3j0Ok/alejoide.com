@@ -1,3 +1,10 @@
+## [2.11.1](https://github.com/4l3j0Ok/alejoide.com/compare/2.11.0...2.11.1) (2026-06-09)
+
+
+### Bug Fixes
+
+* update libraries ([d272ef1](https://github.com/4l3j0Ok/alejoide.com/commit/d272ef1718dd857793de39fdbdb1d3c47b5d2ac0))
+
 # [2.11.0](https://github.com/4l3j0Ok/alejoide.com/compare/2.10.0...2.11.0) (2026-06-09)
 
 
