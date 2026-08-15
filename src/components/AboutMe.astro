@@ -3,109 +3,114 @@ import Section from "../layouts/Section.astro";
 
 const birthDate: Date = new Date(2001, 1, 2);
 const age: number = Math.floor(
-  (Date.now() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25),
+    (Date.now() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25),
 );
 ---
 
 <Section sectionId="AboutMe" sectionTitle="Sobre mí">
-  <div class="intro-grid spotlight-card">
-    <p class="lead">
-      Mi nombre es Alejo. Tengo {age} años y vivo en Argentina.
-    </p>
-    <p>
-      Decidí orientar mis estudios desde adolescente, enfocandome hacia el mundo
-      de la programación y la informática, estudiando en una escuela secundaria
-      técnica con especialización en sistemas.
-    </p>
-    <p>
-      A mediados de 2020 comencé a trabajar en Leafnoise como desarrollador
-      backend, donde consolidé experiencia con Python, Flask y FastAPI en
-      entornos productivos.
-    </p>
-    <p>
-      Pasados dos años di el salto a SRE/DevOps, donde actualmente me encuentro
-      trabajando, creando infraestructura y utilizando tecnologías que rodean el
-      ecosistema de DevOps.
-    </p>
-    <p>
-      Hoy en día trabajo como SRE/DevOps en Leafnoise, haciendo una carrera de
-      Analista Programador y desarrollando una amplia variedad de proyectos
-      personales.
-    </p>
-  </div>
-  <h3>Mis áreas de trabajo</h3>
-  <div class="work-areas">
-    <div class="work-area spotlight-card">
-      <h4>SRE / DevOps</h4>
-      <p>
-        Actualmente me encuentro trabajando de SRE/DevOps, donde trabajo
-        principalmente con tecnologías como Docker, Kubernetes, Webservers,
-        Jenkins y GitLab para crear infraestructura y pipelines de CI/CD.
-      </p>
+    <div class="intro-grid spotlight-card">
+        <p class="lead">
+            Mi nombre es Alejo. Tengo {age} años y vivo en Argentina.
+        </p>
+
+        <p>
+            Desde adolescente decidí orientar mis estudios hacia el mundo de la
+            programación y la informática. Estudié en una escuela secundaria
+            técnica con especialización en sistemas.
+        </p>
+
+        <p>
+            A mediados de 2020 comencé a trabajar en Leafnoise, donde fui
+            consolidándome como desarrollador backend con Python.
+        </p>
+
+        <p>
+            Dos años más tarde di el salto hacia SRE/DevOps, el área que más me
+            apasiona y en la que trabajo actualmente, administrando múltiples
+            infraestructuras tanto internas como de clientes.
+        </p>
+
+        <p>
+            Actualmente trabajo como SRE/DevOps en Leafnoise, estudio la carrera
+            de Analista Programador y, en paralelo, desarrollo una amplia
+            variedad de proyectos personales.
+        </p>
     </div>
-    <div class="work-area spotlight-card">
-      <h4>Backend</h4>
-      <p>
-        Tengo experiencia como desarrollador backend, siendo mi fuerte principal
-        el desarrollo en Python con frameworks como Flask, FastAPI, PyQT/PySide
-        y Reflex.
-      </p>
+    <h3>Mis áreas de trabajo</h3>
+    <div class="work-areas">
+        <div class="work-area spotlight-card">
+            <h4>SRE / DevOps</h4>
+            <p>
+                Actualmente me encuentro trabajando de SRE/DevOps, donde trabajo
+                principalmente con tecnologías como Docker, Kubernetes,
+                Webservers, Jenkins y GitLab para crear infraestructura y
+                pipelines de CI/CD.
+            </p>
+        </div>
+        <div class="work-area spotlight-card">
+            <h4>Backend</h4>
+            <p>
+                Tengo experiencia como desarrollador backend, siendo mi fuerte
+                principal el desarrollo en Python con frameworks como Flask,
+                FastAPI, PyQT/PySide y Reflex.
+            </p>
+        </div>
+        <div class="work-area spotlight-card">
+            <h4>Frontend</h4>
+            <p>
+                Me encuentro incursionando en el desarrollo frontend,
+                aprendiendo Astro, Reflex y React para crear aplicaciones web
+                modernas y mantenibles.
+            </p>
+        </div>
+        <div class="work-area spotlight-card">
+            <h4>Profesor</h4>
+            <p>
+                Me gusta enseñar y tengo como objetivo aportar en formación
+                técnica en niveles superiores a mediano plazo.
+            </p>
+        </div>
     </div>
-    <div class="work-area spotlight-card">
-      <h4>Frontend</h4>
-      <p>
-        Me encuentro incursionando en el desarrollo frontend, aprendiendo Astro,
-        Reflex y React para crear aplicaciones web modernas y mantenibles.
-      </p>
-    </div>
-    <div class="work-area spotlight-card">
-      <h4>Profesor</h4>
-      <p>
-        Me gusta enseñar y tengo como objetivo aportar en formación técnica en
-        niveles superiores a mediano plazo.
-      </p>
-    </div>
-  </div>
-  <style>
-    .intro-grid {
-      padding: 1.1rem;
-      border: 1px solid var(--border-soft);
-      border-radius: 1rem;
-      background: var(--surface-dark);
-      margin-bottom: 1.4rem;
-    }
-    .lead {
-      font-size: 1.08rem;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-    h3 {
-      margin: 0.25rem 0 1rem;
-      font-size: clamp(1.3rem, 2vw, 1.7rem);
-    }
-    .work-areas {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-    .work-area {
-      border: 1px solid var(--border-soft);
-      border-radius: 1rem;
-      padding: 1rem;
-      background: var(--surface-darker);
-    }
-    .work-area h4 {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-size: 1.05rem;
-    }
-    @media (max-width: 900px) {
-      .intro-grid,
-      .work-areas {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <style>
+        .intro-grid {
+            padding: 1.1rem;
+            border: 1px solid var(--border-soft);
+            border-radius: 1rem;
+            background: var(--surface-dark);
+            margin-bottom: 1.4rem;
+        }
+        .lead {
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        h3 {
+            margin: 0.25rem 0 1rem;
+            font-size: clamp(1.3rem, 2vw, 1.7rem);
+        }
+        .work-areas {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+        .work-area {
+            border: 1px solid var(--border-soft);
+            border-radius: 1rem;
+            padding: 1rem;
+            background: var(--surface-darker);
+        }
+        .work-area h4 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 1.05rem;
+        }
+        @media (max-width: 900px) {
+            .intro-grid,
+            .work-areas {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </Section>
