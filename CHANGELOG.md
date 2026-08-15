@@ -1,3 +1,16 @@
+# [2.12.0](https://github.com/4l3j0Ok/alejoide.com/compare/2.11.2...2.12.0) (2026-08-15)
+
+
+### Bug Fixes
+
+* **contact:** render form without react island ([f954a1f](https://github.com/4l3j0Ok/alejoide.com/commit/f954a1f21fef97694a9ffa82578eb6f1def7575a))
+* **projects:** use mock data in development ([e2dbc25](https://github.com/4l3j0Ok/alejoide.com/commit/e2dbc25e344cc6dfcb599f856cfbd0b4c4285668))
+
+
+### Features
+
+* **ui:** add spotlight interactions ([65e3820](https://github.com/4l3j0Ok/alejoide.com/commit/65e382081fb020919b7f9ee0dc9d7df16a64bfd6))
+
 ## [2.11.2](https://github.com/4l3j0Ok/alejoide.com/compare/2.11.1...2.11.2) (2026-06-09)
 
 
