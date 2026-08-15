@@ -1,13 +1,13 @@
 ---
 export const prerender = false;
 import Section from "../layouts/Section.astro";
-import ContactForm from "../components/ContactForm.tsx";
+import ContactForm from "../components/ContactForm.astro";
 import { PUBLIC_EMAIL } from "astro:env/client";
 ---
 
 <Section sectionId="Contact" sectionTitle="Contacto">
   <div class="contact-grid">
-    <div class="contact-info">
+    <div class="contact-info spotlight-card">
       <p>
         Si querés trabajar conmigo o conversar sobre una oportunidad, este
         formulario es el mejor canal.
@@ -20,7 +20,7 @@ import { PUBLIC_EMAIL } from "astro:env/client";
       </p>
     </div>
     <div class="form-card">
-      <ContactForm client:load />
+      <ContactForm />
     </div>
   </div>
 </Section>
@@ -43,7 +43,7 @@ import { PUBLIC_EMAIL } from "astro:env/client";
     border: 1px solid var(--border-soft);
     border-radius: 1rem;
     padding: 1rem;
-    background: var(--surface-contactStrong);
+    background: var(--surface-contact-strong);
   }
   .email {
     font-weight: 600;

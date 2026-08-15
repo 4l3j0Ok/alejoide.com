@@ -1,0 +1,102 @@
+---
+import "../styles/ContactForm.css";
+
+const NAME_MAX = 100;
+const MESSAGE_MAX = 2000;
+---
+
+<form data-contact-form>
+  <div class="top">
+    <div class="form-input">
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        maxlength={NAME_MAX}
+        required
+        data-name-input
+      />
+      <span class="char-counter" data-name-counter>0 / {NAME_MAX}</span>
+    </div>
+    <div class="form-input">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="form-input">
+      <label for="message">Mensaje</label>
+      <textarea
+        id="message"
+        name="message"
+        maxlength={MESSAGE_MAX}
+        required
+        data-message-input></textarea>
+      <span class="char-counter" data-message-counter>0 / {MESSAGE_MAX}</span>
+    </div>
+    <button class="spotlight-button" type="submit" data-submit-button>Enviar</button>
+  </div>
+</form>
+
+<script>
+  const form = document.querySelector("[data-contact-form]");
+
+  if (form instanceof HTMLFormElement) {
+    const nameInput = form.querySelector("[data-name-input]");
+    const messageInput = form.querySelector("[data-message-input]");
+    const nameCounter = form.querySelector("[data-name-counter]");
+    const messageCounter = form.querySelector("[data-message-counter]");
+    const submitButton = form.querySelector("[data-submit-button]");
+
+    const updateCounter = (counter: Element | null, length: number, max: number) => {
+      if (!(counter instanceof HTMLElement)) {
+        return;
+      }
+
+      counter.textContent = `${length} / ${max}`;
+      counter.classList.toggle("warn", length >= max * 0.9);
+    };
+
+    if (nameInput instanceof HTMLInputElement) {
+      const nameMax = nameInput.maxLength;
+
+      nameInput.addEventListener("input", () => {
+        updateCounter(nameCounter, nameInput.value.length, nameMax);
+      });
+    }
+
+    if (messageInput instanceof HTMLTextAreaElement) {
+      const messageMax = messageInput.maxLength;
+
+      messageInput.addEventListener("input", () => {
+        updateCounter(messageCounter, messageInput.value.length, messageMax);
+      });
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const controls = form.querySelectorAll("input, textarea, button");
+      controls.forEach((control) => {
+        if (
+          control instanceof HTMLInputElement ||
+          control instanceof HTMLTextAreaElement ||
+          control instanceof HTMLButtonElement
+        ) {
+          control.disabled = true;
+        }
+      });
+
+      const response = await fetch("/api/sendEmail.json", {
+        method: "POST",
+        body: new FormData(form),
+      });
+      const data = await response.json();
+
+      if (submitButton instanceof HTMLButtonElement && data.message) {
+        submitButton.textContent = "Enviado";
+      }
+    });
+  }
+</script>
