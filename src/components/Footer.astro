@@ -3,83 +3,85 @@ import Logo from "./Logo.astro";
 import { Icon } from "astro-icon/components";
 import { githubUrl, linkedinUrl, email } from "../config/footer";
 const currentYear = new Date().getFullYear();
+const yearRange = currentYear === 2024 ? "2024" : `2024 - ${currentYear}`;
+const footerProjectName = "alejoide.com by Alejo Sarmiento";
 ---
 
 <footer>
-  <content>
-    <Logo />
-    <p>
-      © 2024 {currentYear !== 2024 && `- ${currentYear}`}
-      <span class="project-name">Alejoide by Alejo Sarmiento</span>
-      v2.
-    </p>
-    <div class="links">
-      <a href={githubUrl} target="_blank" aria-label="GitHub">
-        <Icon name="mdi:github" />
-      </a>
-      <a href={linkedinUrl} target="_blank" aria-label="LinkedIn">
-        <Icon name="mdi:linkedin" />
-      </a>
-      <a href={`mailto:${email}`} aria-label="Email">
-        <Icon name="mdi:email" />
-      </a>
-    </div>
-  </content>
+    <content>
+        <Logo />
+        <p>
+            {`© ${yearRange} `}<span class="project-name">{footerProjectName}</span>{" v2."}
+        </p>
+        <div class="links">
+            <a href={githubUrl} target="_blank" aria-label="GitHub">
+                <Icon name="mdi:github" />
+            </a>
+            <a href={linkedinUrl} target="_blank" aria-label="LinkedIn">
+                <Icon name="mdi:linkedin" />
+            </a>
+            <a href={`mailto:${email}`} aria-label="Email">
+                <Icon name="mdi:email" />
+            </a>
+        </div>
+    </content>
 </footer>
 
 <style>
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
-    width: 100%;
-    position: relative;
-  }
-  content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: var(--content-width);
-    border-top: 1px solid var(--border-soft);
-    padding: 1.2rem 0 2rem;
-    gap: 1rem;
-    color: var(--text-muted);
-  }
-  .links {
-    display: flex;
-    gap: 0.55rem;
-  }
-  .links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.1rem;
-    height: 2.1rem;
-    border-radius: 999px;
-    border: 1px solid var(--border-soft);
-    background: var(--surface-footer);
-    color: var(--text-muted);
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
-  .links a:hover {
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-  .links a :global(svg) {
-    width: 1.15rem;
-    height: 1.15rem;
-  }
-  .project-name {
-    font-weight: 600;
-    color: var(--accent);
-  }
-  @media (max-width: 900px) {
-    content {
-      flex-direction: column;
-      text-align: center;
-      padding-top: 1.6rem;
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        width: 100%;
+        position: relative;
     }
-  }
+    content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: var(--content-width);
+        border-top: 1px solid var(--border-soft);
+        padding: 1.2rem 0 2rem;
+        gap: 1rem;
+        color: var(--text-muted);
+    }
+    .links {
+        display: flex;
+        gap: 0.55rem;
+    }
+    .links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--surface-footer);
+        color: var(--text-muted);
+        transition:
+            color 0.2s ease,
+            border-color 0.2s ease;
+    }
+    .links a:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+    .links a :global(svg) {
+        width: 1.15rem;
+        height: 1.15rem;
+    }
+    .project-name {
+        font-weight: 600;
+        color: var(--accent);
+    }
+    @media (max-width: 900px) {
+        content {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 1.6rem;
+        }
+    }
 </style>
