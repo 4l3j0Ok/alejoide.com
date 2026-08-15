@@ -1,3 +1,10 @@
+## [2.12.3](https://github.com/4l3j0Ok/alejoide.com/compare/2.12.2...2.12.3) (2026-08-15)
+
+
+### Bug Fixes
+
+* change AboutMe texts ([ade05b5](https://github.com/4l3j0Ok/alejoide.com/commit/ade05b5ededbf0b8559b692032bc2941c686c275))
+
 ## [2.12.2](https://github.com/4l3j0Ok/alejoide.com/compare/2.12.1...2.12.2) (2026-08-15)
 
 
