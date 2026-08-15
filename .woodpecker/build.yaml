@@ -4,15 +4,22 @@ steps:
     settings:
       registry: docker.io
       repo: alejoide/alejoide-web
+
       username:
         from_secret: dockerhub_username
       password:
         from_secret: dockerhub_token
+
       tags:
         - latest
         - ${CI_COMMIT_TAG}
+
       dockerfile: Dockerfile
       platforms: linux/amd64
+
+      buildkit_debug: true
+      buildkit_oci_max_parallelism: 2
+
   - name: trigger-deploy
     image: woodpeckerci/plugin-trigger
     settings:
@@ -25,6 +32,7 @@ steps:
     when:
       status:
         - success
+
 when:
   event:
     - tag
