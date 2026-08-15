@@ -27,6 +27,19 @@ interface Props {
         <Navbar />
         <slot />
         <Footer />
+        <script>
+            document.addEventListener("pointermove", (event) => {
+                const target = event.target as Element | null;
+                const element = target?.closest<HTMLElement>(".spotlight-card, .spotlight-button");
+
+                if (!element) return;
+
+                const rect = element.getBoundingClientRect();
+
+                element.style.setProperty("--spotlight-x", `${event.clientX - rect.left}px`);
+                element.style.setProperty("--spotlight-y", `${event.clientY - rect.top}px`);
+            });
+        </script>
     </body>
 </html>
 
@@ -41,6 +54,8 @@ interface Props {
         scroll-behavior: smooth;
     }
     body {
+        --pointer-x: 50vw;
+        --pointer-y: 20vh;
         background:
             radial-gradient(
                 circle at 12% 10%,
@@ -79,6 +94,10 @@ interface Props {
     body {
         position: relative;
     }
+    body > * {
+        position: relative;
+        z-index: 1;
+    }
     a {
         color: var(--text-primary);
         text-decoration: none;
@@ -116,6 +135,89 @@ interface Props {
     }
     main > *:nth-child(4) {
         animation-delay: 0.2s;
+    }
+    .spotlight-card,
+    .spotlight-button {
+        --spotlight-x: 50%;
+        --spotlight-y: 50%;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+    }
+    .spotlight-card::before,
+    .spotlight-button::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+    }
+    .spotlight-card::before {
+        z-index: 0;
+    }
+    .spotlight-card :where(*) {
+        position: relative;
+        z-index: 1;
+    }
+    .spotlight-card::before {
+        background:
+            radial-gradient(
+                260px circle at var(--spotlight-x) var(--spotlight-y),
+                rgba(255, 107, 53, 0.22),
+                rgba(255, 107, 53, 0.075) 38%,
+                transparent 68%
+            ),
+            linear-gradient(145deg, rgba(255, 255, 255, 0.055), transparent 42%);
+    }
+    .spotlight-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: radial-gradient(
+            220px circle at var(--spotlight-x) var(--spotlight-y),
+            rgba(255, 237, 213, 0.75),
+            rgba(255, 107, 53, 0.28) 36%,
+            transparent 68%
+        );
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 0;
+    }
+    .spotlight-button::before {
+        width: 150%;
+        aspect-ratio: 1;
+        inset: auto;
+        top: var(--spotlight-y);
+        left: var(--spotlight-x);
+        border-radius: 50%;
+        background: rgba(255, 107, 53, 0.2);
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.36s ease-out, opacity 0.12s ease;
+    }
+    .spotlight-card:hover::before,
+    .spotlight-card:hover::after,
+    .spotlight-button:hover::before {
+        opacity: 1;
+    }
+    .spotlight-button:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    @media (hover: none), (pointer: coarse) {
+        .spotlight-card::before,
+        .spotlight-card::after,
+        .spotlight-button::before {
+            display: none;
+        }
     }
     @keyframes sectionReveal {
         to {

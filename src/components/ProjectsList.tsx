@@ -34,7 +34,7 @@ export default function ProjectsList() {
         const { title, description, image, url, repo_url } = project;
 
         return (
-          <article key={project.id} className="project">
+          <article key={project.id} className="project spotlight-card">
             {image && <img src={image} alt={title} loading="lazy" />}
             <div className="project-info">
               <h3>{title}</h3>
@@ -42,12 +42,12 @@ export default function ProjectsList() {
             </div>
             <div className="project-links">
               {url && (
-                <a href={url} target="_blank">
+                <a className="spotlight-button" href={url} target="_blank">
                   Ver sitio →
                 </a>
               )}
               {repo_url && (
-                <a href={repo_url} target="_blank">
+                <a className="spotlight-button" href={repo_url} target="_blank">
                   Ver código →
                 </a>
               )}
