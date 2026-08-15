@@ -1,3 +1,11 @@
+## [2.12.2](https://github.com/4l3j0Ok/alejoide.com/compare/2.12.1...2.12.2) (2026-08-15)
+
+
+### Bug Fixes
+
+* change footer text build to manage formatter ([7fea7d6](https://github.com/4l3j0Ok/alejoide.com/commit/7fea7d64693d534e375f8302feb096f1dcc01617))
+* update buildkit flags ([70591d4](https://github.com/4l3j0Ok/alejoide.com/commit/70591d4e6fea8b4b4009b517611ea8ea31b4d168))
+
 ## [2.12.1](https://github.com/4l3j0Ok/alejoide.com/compare/2.12.0...2.12.1) (2026-08-15)
 
 
