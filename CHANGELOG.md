@@ -1,3 +1,10 @@
+## [2.12.1](https://github.com/4l3j0Ok/alejoide.com/compare/2.12.0...2.12.1) (2026-08-15)
+
+
+### Bug Fixes
+
+* remove unused platform ([b7d76b6](https://github.com/4l3j0Ok/alejoide.com/commit/b7d76b6959fbac3ceb243d56f6c780cb430d1caf))
+
 # [2.12.0](https://github.com/4l3j0Ok/alejoide.com/compare/2.11.2...2.12.0) (2026-08-15)
 
 
