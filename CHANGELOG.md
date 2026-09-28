@@ -1,3 +1,21 @@
+# [3.0.0](https://github.com/[secure]/alejoide.com/compare/2.12.3...3.0.0) (2026-09-28)
+
+### Bug Fixes
+
+* pin typescript 6 and exclude submodules from astro check ([c807a09](https://github.com/[secure]/alejoide.com/commit/c807a090c8b0c65dfabc4005df55ebf539669020))
+
+### Code Refactoring
+
+* **deploy:** remove deploy pipeline and use a single prefixed .env ([3a81b42](https://github.com/[secure]/alejoide.com/commit/3a81b425f6da9afd222f7a8e286bfa44ec1af765))
+
+### Features
+
+* add projects-admin-frontend submodule and deploy service ([68bf26e](https://github.com/[secure]/alejoide.com/commit/68bf26ee55f841b8df008cde5f6d7d730f6c4ed9))
+
+### BREAKING CHANGES
+
+* **deploy:** deploy config moved from config/*/.env to a single deploy/.env
+
 ## [2.12.3](https://github.com/4l3j0Ok/alejoide.com/compare/2.12.2...2.12.3) (2026-08-15)
 
 
