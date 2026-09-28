@@ -3,8 +3,13 @@ services:
     image: alejoide/alejoide-web:latest
     container_name: alejoide-web
     restart: unless-stopped
-    env_file:
-      - ./config/alejoide-web/.env
+    environment:
+      SEND_EMAIL_FROM: ${WEB_SEND_EMAIL_FROM}
+      SEND_EMAIL_TO: ${WEB_SEND_EMAIL_TO}
+      PUBLIC_EMAIL: ${WEB_PUBLIC_EMAIL}
+      RESEND_API_KEY: ${WEB_RESEND_API_KEY}
+      PROJECTS_API_URL: ${WEB_PROJECTS_API_URL}
+      TZ: ${TZ}
     networks:
       - internal
 
@@ -12,8 +17,17 @@ services:
     image: alejoide/projects-api:latest
     container_name: projects-api
     restart: unless-stopped
-    env_file:
-      - ./config/projects-api/.env
+    environment:
+      APP_VERSION: ${PROJECTS_API_APP_VERSION}
+      DEV_MODE: ${PROJECTS_API_DEV_MODE}
+      CLEAR_DB_ON_STARTUP: ${PROJECTS_API_CLEAR_DB_ON_STARTUP}
+      LOG_NAME: ${PROJECTS_API_LOG_NAME}
+      LOG_LEVEL: ${PROJECTS_API_LOG_LEVEL}
+      CORS_ALLOW_ORIGINS: ${PROJECTS_API_CORS_ALLOW_ORIGINS}
+      IMAGES_BASE_URL: ${PROJECTS_API_IMAGES_BASE_URL}
+      MAX_IMAGE_SIZE_MB: ${PROJECTS_API_MAX_IMAGE_SIZE_MB}
+      ADMIN_API_KEY: ${PROJECTS_API_ADMIN_API_KEY}
+      TZ: ${TZ}
     volumes:
       - projects-api-data:/app/src/data/
     networks:
@@ -27,8 +41,11 @@ services:
     image: alejoide/projects-admin-frontend:latest
     container_name: projects-admin-frontend
     restart: unless-stopped
-    env_file:
-      - ./config/projects-admin-frontend/.env
+    environment:
+      PROJECTS_API_URL: ${PROJECTS_ADMIN_FRONTEND_PROJECTS_API_URL}
+      # Compartida con projects-api
+      PROJECTS_API_KEY: ${PROJECTS_API_ADMIN_API_KEY}
+      TZ: ${TZ}
     depends_on:
       - projects-api
     networks:
@@ -38,8 +55,9 @@ services:
   nginx:
     image: nginx:1.29-alpine
     container_name: alejoide-nginx
-    env_file:
-      - ./config/nginx/.env
+    environment:
+      SERVER_NAME: ${NGINX_SERVER_NAME}
+      TZ: ${TZ}
     volumes:
       - ./config/nginx/nginx.conf:/etc/nginx/templates/default.conf.template:ro
     restart: always

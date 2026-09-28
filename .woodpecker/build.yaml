@@ -20,19 +20,6 @@ steps:
       buildkit_debug: true
       buildkit_oci_max_parallelism: 2
 
-  - name: trigger-deploy
-    image: woodpeckerci/plugin-trigger
-    settings:
-      token:
-        from_secret: woodpecker_deploy_token
-      repositories:
-        - 4l3j0Ok/alejoide-web@main
-      deploy: alejoide-web
-      last_successful: true
-    when:
-      status:
-        - success
-
 when:
   event:
     - tag

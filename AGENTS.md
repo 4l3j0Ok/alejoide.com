@@ -89,7 +89,8 @@ import { PUBLIC_EMAIL } from "astro:env/client";
 - Declared in `astro.config.mjs` under `env.schema`
 - **Server-only secrets**: import from `astro:env/server` (e.g., `RESEND_API_KEY`, `SEND_EMAIL_FROM`)
 - **Public vars**: import from `astro:env/client` (e.g., `PUBLIC_EMAIL`, `SEND_EMAIL_TO`)
-- Never commit `.env` with real secrets; use CI secrets injection
+- Never commit `.env` with real secrets
+- **Deploy**: `deploy/compose.yaml` reads a single `deploy/.env` (copy from `deploy/.env.example`). Keys are prefixed per service (`WEB_*`, `PROJECTS_API_*`, `PROJECTS_ADMIN_FRONTEND_*`, `NGINX_*`) plus a shared `TZ`, and mapped to each container in the `environment:` block. There is no deploy pipeline or env-generation script: set secrets manually and keep `.env.example` in sync when adding vars
 
 ## Language & Localization
 - Keep user-facing copy in **Spanish** (es-ar) unless UI context is clearly English
