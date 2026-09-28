@@ -1,3 +1,6 @@
 [submodule "projects-api"]
 	path = projects-api
 	url = https://github.com/4l3j0Ok/projects-api
+[submodule "projects-admin-frontend"]
+	path = projects-admin-frontend
+	url = https://github.com/4l3j0Ok/projects-admin-frontend

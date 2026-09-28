@@ -20,6 +20,21 @@ services:
       - nginx-proxy
       - internal
 
+  # Panel interno de administración de proyectos.
+  # Se expone solo a través de nginx-proxy-manager (red nginx-proxy) hacia
+  # projects-admin-frontend:4321, restringido con una access list.
+  projects-admin-frontend:
+    image: alejoide/projects-admin-frontend:latest
+    container_name: projects-admin-frontend
+    restart: unless-stopped
+    env_file:
+      - ./config/projects-admin-frontend/.env
+    depends_on:
+      - projects-api
+    networks:
+      - nginx-proxy
+      - internal
+
   nginx:
     image: nginx:1.29-alpine
     container_name: alejoide-nginx
