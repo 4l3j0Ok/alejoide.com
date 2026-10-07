@@ -1,3 +1,9 @@
+## [3.0.1](https://github.com/[secure]/alejoide.com/compare/3.0.0...3.0.1) (2026-10-07)
+
+### Bug Fixes
+
+* correct typo in Header.astro experience description ([674d70c](https://github.com/[secure]/alejoide.com/commit/674d70c46d6056c83f85dd689ff9fd10d6e2be9f))
+
 # [3.0.0](https://github.com/[secure]/alejoide.com/compare/2.12.3...3.0.0) (2026-09-28)
 
 ### Bug Fixes
