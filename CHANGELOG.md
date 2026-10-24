@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/[secure]/alejoide.com/compare/3.1.0...3.1.1) (2026-10-24)
+
+### Bug Fixes
+
+* pin node version ([0c8cfa2](https://github.com/[secure]/alejoide.com/commit/0c8cfa277b80287da37e4f17968fea48a506930f))
+* update deps ([6b88a2c](https://github.com/[secure]/alejoide.com/commit/6b88a2c01dc46d882c5adec213491a7b9ab109e7))
+
 # [3.1.0](https://github.com/[secure]/alejoide.com/compare/3.0.1...3.1.0) (2026-10-24)
 
 ### Features
