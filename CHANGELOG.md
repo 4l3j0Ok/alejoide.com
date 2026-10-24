@@ -1,3 +1,9 @@
+# [3.1.0](https://github.com/[secure]/alejoide.com/compare/3.0.1...3.1.0) (2026-10-24)
+
+### Features
+
+* add featured projects ([ebc647e](https://github.com/[secure]/alejoide.com/commit/ebc647e4f12bb5844b39f5256851ea4a2c3c68ee))
+
 ## [3.0.1](https://github.com/[secure]/alejoide.com/compare/3.0.0...3.0.1) (2026-10-07)
 
 ### Bug Fixes
