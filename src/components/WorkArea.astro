@@ -1,0 +1,41 @@
+---
+import type { WorkArea } from "../config/workAreas";
+import TechnologyPill from "./TechnologyPill.astro";
+
+type Props = WorkArea;
+
+const { title, description, pills } = Astro.props;
+---
+
+<div class="work-area spotlight-card">
+    <h4>{title}</h4>
+    <p>{description}</p>
+    <footer class="work-area-footer" aria-label={`Tecnologías de ${title}`}>
+        {pills.map((pill) => <TechnologyPill name={pill.name} icon={pill.icon} />)}
+    </footer>
+</div>
+
+<style>
+    .work-area {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border-soft);
+        border-radius: 1rem;
+        padding: 1rem;
+        background: var(--surface-darker);
+    }
+    .work-area h4 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 1.05rem;
+    }
+    .work-area-footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: auto;
+        padding-top: 1rem;
+    }
+</style>

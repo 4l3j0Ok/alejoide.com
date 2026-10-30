@@ -18,6 +18,7 @@
     "@fontsource/montserrat": "^5.3.0",
     "@iconify-json/fluent": "^1.2.59",
     "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.101",
     "@iconify/react": "^6.0.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

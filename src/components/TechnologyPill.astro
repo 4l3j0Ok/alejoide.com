@@ -1,0 +1,33 @@
+---
+import { Icon } from "astro-icon/components";
+import type { TechnologyPill } from "../config/workAreas";
+
+type Props = TechnologyPill;
+
+const { name, icon } = Astro.props;
+---
+
+<span class="technology-pill">
+    {icon && <Icon name={icon} aria-hidden="true" />}
+    {name}
+</span>
+
+<style>
+    .technology-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.3rem 0.55rem;
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        color: var(--text-primary);
+        font-size: 0.78rem;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .technology-pill :global(svg) {
+        width: 1em;
+        height: 1em;
+    }
+</style>

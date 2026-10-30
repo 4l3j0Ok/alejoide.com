@@ -1,5 +1,7 @@
 ---
 import Section from "../layouts/Section.astro";
+import WorkArea from "./WorkArea.astro";
+import { workAreas } from "../config/workAreas";
 
 const birthDate: Date = new Date(2001, 1, 2);
 const age: number = Math.floor(
@@ -38,38 +40,7 @@ const age: number = Math.floor(
     </div>
     <h3>Mis áreas de trabajo</h3>
     <div class="work-areas">
-        <div class="work-area spotlight-card">
-            <h4>SRE / DevOps</h4>
-            <p>
-                Actualmente me encuentro trabajando de SRE/DevOps, donde trabajo
-                principalmente con tecnologías como Docker, Kubernetes,
-                Webservers, Jenkins y GitLab para crear infraestructura y
-                pipelines de CI/CD.
-            </p>
-        </div>
-        <div class="work-area spotlight-card">
-            <h4>Backend</h4>
-            <p>
-                Tengo experiencia como desarrollador backend, siendo mi fuerte
-                principal el desarrollo en Python con frameworks como Flask,
-                FastAPI, PyQT/PySide y Reflex.
-            </p>
-        </div>
-        <div class="work-area spotlight-card">
-            <h4>Frontend</h4>
-            <p>
-                Me encuentro incursionando en el desarrollo frontend,
-                aprendiendo Astro, Reflex y React para crear aplicaciones web
-                modernas y mantenibles.
-            </p>
-        </div>
-        <div class="work-area spotlight-card">
-            <h4>Profesor</h4>
-            <p>
-                Me gusta enseñar y tengo como objetivo aportar en formación
-                técnica en niveles superiores a mediano plazo.
-            </p>
-        </div>
+        {workAreas.map((area) => <WorkArea {...area} />)}
     </div>
     <style>
         .intro-grid {
@@ -92,19 +63,6 @@ const age: number = Math.floor(
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 1rem;
-        }
-        .work-area {
-            border: 1px solid var(--border-soft);
-            border-radius: 1rem;
-            padding: 1rem;
-            background: var(--surface-darker);
-        }
-        .work-area h4 {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.45rem;
-            font-size: 1.05rem;
         }
         @media (max-width: 900px) {
             .intro-grid,

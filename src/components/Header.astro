@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import meImage from "../assets/images/me.webp";
+import TechnologyPill from "./TechnologyPill.astro";
 
 const initialExperienceDate: Date = new Date(2020, 7, 19);
 const experienceYears: number = Math.floor(
@@ -15,19 +16,26 @@ const experienceYears: number = Math.floor(
             <p class="eyebrow">Hola, soy</p>
             <h1>Alejo Sarmiento</h1>
             <p class="summary">
-                SRE y desarrollador de software con más de {
-                    experienceYears
-                } años de experiencia en la industria tecnológica, especializado en
-                backend e infraestructura de software.
+                SRE y desarrollador de software con más de {experienceYears}{" "}
+                años de experiencia en la industria tecnológica, especializado
+                en backend e infraestructura de software.
             </p>
             <div class="stack">
-                <span>SRE/DevOps</span>
-                <span>Backend</span>
-                <span>Frontend</span>
+                <TechnologyPill name="SRE/DevOps" icon="mdi:cloud-cog" />
+                <TechnologyPill name="Backend" icon="mdi:server" />
+                <TechnologyPill name="Frontend" icon="mdi:monitor-dashboard" />
+                <TechnologyPill
+                    name="Inteligencia Artificial"
+                    icon="mdi:robot"
+                />
             </div>
             <div class="actions">
-                <a class="spotlight-button" href="#Projects">Ver proyectos</a>
-                <a class="ghost spotlight-button" href="#Contact">Contactar</a>
+                <a class="spotlight-button" href="#Projects">
+                    Ver proyectos
+                </a>
+                <a class="ghost spotlight-button" href="#Contact">
+                    Contactar
+                </a>
             </div>
         </div>
         <div class="item visual">
@@ -78,14 +86,11 @@ const experienceYears: number = Math.floor(
         gap: 0.6rem;
         margin-top: 1.3rem;
     }
-    .stack span {
+    .stack :global(.technology-pill) {
         padding: 0.4rem 0.7rem;
-        border: 1px solid var(--border-soft);
         background: var(--surface-header);
-        border-radius: 999px;
         font-size: 0.82rem;
         font-family: "Cascadia Code Variable", monospace;
-        color: var(--text-primary);
     }
     .actions {
         display: flex;
@@ -100,7 +105,11 @@ const experienceYears: number = Math.floor(
         color: var(--accent);
         font-weight: 700;
         font-size: 0.95rem;
-        transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        transition:
+            background-color 0.2s ease,
+            color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
     }
     .actions a:hover {
         background: var(--accent-muted);
