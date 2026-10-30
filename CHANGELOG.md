@@ -1,3 +1,9 @@
+## [3.2.1](https://github.com/[secure]/alejoide.com/compare/3.2.0...3.2.1) (2026-10-30)
+
+### Bug Fixes
+
+* update workareas ([f24e65d](https://github.com/[secure]/alejoide.com/commit/f24e65da5777c9ae4f199975def83bfe8cdf8e72))
+
 # [3.2.0](https://github.com/[secure]/alejoide.com/compare/3.1.1...3.2.0) (2026-10-30)
 
 ### Features
