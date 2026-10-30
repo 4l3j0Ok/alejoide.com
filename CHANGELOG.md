@@ -1,3 +1,9 @@
+# [3.3.0](https://github.com/[secure]/alejoide.com/compare/3.2.2...3.3.0) (2026-10-30)
+
+### Features
+
+* add curriculum vitae button ([9a29471](https://github.com/[secure]/alejoide.com/commit/9a29471d466d8bf3e2c9f1f269440d0981f266f7))
+
 ## [3.2.2](https://github.com/[secure]/alejoide.com/compare/3.2.1...3.2.2) (2026-10-30)
 
 ### Bug Fixes
