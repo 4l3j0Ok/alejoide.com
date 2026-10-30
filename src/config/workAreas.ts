@@ -42,11 +42,14 @@ export const backendArea: WorkArea = {
     { name: "FastAPI", icon: "simple-icons:fastapi" },
     { name: "Flask", icon: "simple-icons:flask" },
     { name: "PostgreSQL", icon: "simple-icons:postgresql" },
+    { name: "MongoDB", icon: "simple-icons:mongodb" },
+    { name: "SQL Server", icon: "simple-icons:sqlserver" },
+    { name: "MySQL", icon: "simple-icons:mysql" },
+    { name: "SQLite", icon: "simple-icons:sqlite" },
     { name: "Redis", icon: "simple-icons:redis" },
     { name: "SQLModel", icon: "simple-icons:sqlalchemy" },
     { name: "SQLAlchemy", icon: "simple-icons:sqlalchemy" },
     { name: "REST y SOAP", icon: "mdi:api" },
-    { name: "pytest", icon: "simple-icons:pytest" },
   ],
 };
 
