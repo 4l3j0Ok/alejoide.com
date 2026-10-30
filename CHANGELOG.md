@@ -1,3 +1,9 @@
+## [3.2.2](https://github.com/[secure]/alejoide.com/compare/3.2.1...3.2.2) (2026-10-30)
+
+### Bug Fixes
+
+* use correct simple-icons name for SQL Server ([f328d11](https://github.com/[secure]/alejoide.com/commit/f328d113ecde97aae79a2cd0c287f840b1259fc6))
+
 ## [3.2.1](https://github.com/[secure]/alejoide.com/compare/3.2.0...3.2.1) (2026-10-30)
 
 ### Bug Fixes
