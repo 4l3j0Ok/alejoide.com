@@ -43,7 +43,7 @@ export const backendArea: WorkArea = {
     { name: "Flask", icon: "simple-icons:flask" },
     { name: "PostgreSQL", icon: "simple-icons:postgresql" },
     { name: "MongoDB", icon: "simple-icons:mongodb" },
-    { name: "SQL Server", icon: "simple-icons:sqlserver" },
+    { name: "SQL Server", icon: "simple-icons:microsoftsqlserver" },
     { name: "MySQL", icon: "simple-icons:mysql" },
     { name: "SQLite", icon: "simple-icons:sqlite" },
     { name: "Redis", icon: "simple-icons:redis" },
