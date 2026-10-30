@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import CvButton from "../components/CvButton.astro";
 // @ts-ignore
 import "@fontsource-variable/manrope";
 // @ts-ignore
@@ -27,6 +28,7 @@ interface Props {
         <Navbar />
         <slot />
         <Footer />
+        <CvButton />
         <script>
             document.addEventListener("pointermove", (event) => {
                 const target = event.target as Element | null;

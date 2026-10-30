@@ -1,0 +1,76 @@
+---
+import { Icon } from "astro-icon/components";
+const cvUrl: string = "https://cv.alejoide.com/?print";
+---
+
+<a
+    class="cv-button"
+    href={cvUrl}
+    target="_blank"
+    rel="noopener"
+    aria-label="Descargar Currículum Vitae"
+>
+    <Icon name="mdi:file-account-outline" />
+    <span>Ver Currículum Vitae</span>
+</a>
+
+<style>
+    .cv-button {
+        position: fixed;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        z-index: 60;
+        display: inline-flex;
+        align-items: center;
+        gap: 0;
+        height: 3.1rem;
+        padding: 0 0.95rem;
+        border-radius: 999px;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: var(--text-dark);
+        box-shadow: var(--shadow-navbar);
+        overflow: hidden;
+        white-space: nowrap;
+        transition:
+            gap 0.3s ease,
+            background-color 0.2s ease,
+            color 0.2s ease;
+    }
+    .cv-button :global(svg) {
+        width: 1.35rem;
+        height: 1.35rem;
+        flex-shrink: 0;
+    }
+    .cv-button span {
+        font-family: "Cascadia Code Variable", monospace;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition:
+            max-width 0.35s ease,
+            opacity 0.25s ease;
+    }
+    .cv-button:hover,
+    .cv-button:focus-visible {
+        gap: 0.6rem;
+        background: var(--accent-light);
+        border-color: var(--accent-light);
+        color: var(--text-dark);
+    }
+    .cv-button:hover span,
+    .cv-button:focus-visible span {
+        max-width: 22rem;
+        opacity: 1;
+    }
+    @media (max-width: 900px) {
+        .cv-button {
+            right: 1rem;
+            bottom: 1rem;
+        }
+    }
+</style>
