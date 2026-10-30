@@ -1,3 +1,9 @@
+# [3.2.0](https://github.com/[secure]/alejoide.com/compare/3.1.1...3.2.0) (2026-10-30)
+
+### Features
+
+* add technology pills with icons and work area config ([19be519](https://github.com/[secure]/alejoide.com/commit/19be5193b49c39d57c4842f16549961e6abb81d3))
+
 ## [3.1.1](https://github.com/[secure]/alejoide.com/compare/3.1.0...3.1.1) (2026-10-24)
 
 ### Bug Fixes
