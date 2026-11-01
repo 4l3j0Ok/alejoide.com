@@ -1,3 +1,9 @@
+## [3.3.1](https://github.com/[secure]/alejoide.com/compare/3.3.0...3.3.1) (2026-11-01)
+
+### Bug Fixes
+
+* update cvUrl ([9d85dbb](https://github.com/[secure]/alejoide.com/commit/9d85dbb2eeff142a3b4fd19d88226aa4e05e8f72))
+
 # [3.3.0](https://github.com/[secure]/alejoide.com/compare/3.2.2...3.3.0) (2026-10-30)
 
 ### Features
