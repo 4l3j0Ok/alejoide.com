@@ -53,7 +53,7 @@ services:
       - internal
 
   nginx:
-    image: nginx:1.29-alpine
+    image: nginx:1.30.7-alpine
     container_name: alejoide-nginx
     environment:
       SERVER_NAME: ${NGINX_SERVER_NAME}
