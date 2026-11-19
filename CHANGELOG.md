@@ -1,3 +1,9 @@
+## [3.3.2](https://github.com/[secure]/alejoide.com/compare/3.3.1...3.3.2) (2026-11-19)
+
+### Bug Fixes
+
+* **security:** pin nginx 1.30.7-alpine (CVE-2026-123007 NGINX2Root) ([a739ec7](https://github.com/[secure]/alejoide.com/commit/a739ec7a84741e8fbe3b43ba925516682513c9b5))
+
 ## [3.3.1](https://github.com/[secure]/alejoide.com/compare/3.3.0...3.3.1) (2026-11-01)
 
 ### Bug Fixes
