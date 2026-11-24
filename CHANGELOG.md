@@ -1,3 +1,9 @@
+## [3.3.3](https://github.com/[secure]/alejoide.com/compare/3.3.2...3.3.3) (2026-11-24)
+
+### Bug Fixes
+
+* **deps:** actualizar astro y dependencias con vulnerabilidades ([0bbb9c9](https://github.com/[secure]/alejoide.com/commit/0bbb9c9c7f74c27b55dd731727771e619e29ce08))
+
 ## [3.3.2](https://github.com/[secure]/alejoide.com/compare/3.3.1...3.3.2) (2026-11-19)
 
 ### Bug Fixes
