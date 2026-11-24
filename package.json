@@ -12,27 +12,27 @@
   "dependencies": {
     "@astrojs/check": "^0.9.12",
     "@astrojs/node": "11.1.9",
-    "@astrojs/react": "^7.1.1",
+    "@astrojs/react": "^7.1.9",
     "@fontsource-variable/cascadia-code": "^5.3.0",
     "@fontsource-variable/manrope": "^5.3.0",
     "@fontsource/montserrat": "^5.3.0",
-    "@iconify-json/fluent": "^1.2.59",
+    "@iconify-json/fluent": "^1.2.62",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.101",
-    "@iconify/react": "^6.0.2",
+    "@iconify-json/simple-icons": "^1.2.104",
+    "@iconify/react": "^6.0.4",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "astro": "7.4.2",
+    "astro": "7.4.7",
     "astro-icon": "^1.2.0",
-    "cookie": "^2.0.1",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
-    "resend": "^6.30.0",
+    "cookie": "^2.0.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "resend": "^6.39.0",
     "sharp": "^0.35.5",
     "typescript": "^6.0.3"
   },
   "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
   "devDependencies": {
-    "@playwright/test": "^1.63.0"
+    "@playwright/test": "^1.65.1"
   }
 }
